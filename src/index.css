@@ -1,0 +1,186 @@
+ body {
+            font-family: "Verdana";
+            background-color: #fdfbfb;f5f8ef;
+            color: #5d4037;
+            font-size: 14px;
+            scroll-behavior: smooth;
+        }
+
+        /* Навигация */
+		
+        .navbar {
+            background: #067e9d;linear-gradient(90deg, #067e9d, #bae2ff);
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1100;
+			color:white;
+			font-weight: 900;
+        }
+
+		.navbar-brand{
+			color:white;
+			font-weight: 900;
+		}
+
+        .nav-link {
+            font-weight: 900;
+            color: white;#5d4037 !important;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ff8a80 !important;
+        }
+
+        /* Герой секция (Представяне) */
+        .hero-intro {
+            padding: 80px 0 40px;
+            background: linear-gradient(180deg, #fdfbfb 0%, #ffffff 100%);
+            text-align: center;
+        }
+
+        /* Стилът на книгата от твоя дизайн */
+        .book-wrapper {
+            position: relative;
+            display: inline-block;
+            perspective: 1000px;
+        }
+
+        .real-book-frame {
+            position: relative;
+            height: 500px;
+            width: auto;
+            border-radius: 4px 15px 15px 4px;
+            background: #333;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+            transition: transform 0.4s ease;
+            border: 3px solid #333;
+        }
+
+        .book-wrapper:hover .real-book-frame {
+            transform: rotateY(-5deg) scale(1.02);
+        }
+
+        .btn-pastel {
+            background-color: #ff8a80; #5aa9aa;
+            color: white;
+            border-radius: 30px;
+            padding: 12px 35px;
+            border: none;
+            font-weight: bold;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-pastel:hover {
+            background-color: #ff5252;
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 138, 128, 0.4);
+        }
+
+        .gallery-img {
+            cursor: pointer;
+            border-radius: 15px;
+            transition: 0.3s;
+            object-fit: cover;
+            height: 250px;
+            width: 100%;
+        }
+
+        .content-box {
+            background-color: #fff9c4;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        #orderFormSection {
+            display: none;
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+		 #orderFormSectionMessage {
+            display: none;
+            background: #ddf3f9;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+			text-align:center;
+			
+        }
+
+        .ebook-section {
+            background: linear-gradient(135deg, #f0fdf4, #e8f5e9);
+            border: 2px dashed #a5d6a7;
+            border-radius: 18px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 30px;
+            padding: 8px 15px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+        .btn-pdf { background: #fce4ec; color: #c62828; }
+        .btn-epub { background: #c1f4c6; color: #2e7d32; }
+		.btn-mobi { background: #84ccebbb; color: #085678bb }
+
+        footer {
+            background-color: #fff;
+            padding: 40px 0;
+            border-top: 1px solid #eee;
+        }
+
+.backtop {
+  position: fixed;
+  left: 0;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background: #e9e2df;
+  z-index: 100;
+  
+}
+
+.dialog {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.close-button{
+	position:fixed;
+	top:10px;
+	right: 10px;
+	
+	border-radius: 10%;
+  
+  border: 2px solid rgb(255, 0, 0);
+  color: rgb(240, 40, 40);
+  padding:5px 10px;
+}
+
+.close-button2{
+	float:right;
+	
+	border-radius: 10%;
+  
+  border: 2px solid black;
+  color: rgb(240, 40, 40);
+  padding:5px 10px;
+}
