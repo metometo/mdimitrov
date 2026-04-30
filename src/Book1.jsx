@@ -228,10 +228,9 @@ export function Book1()
 						<div className="ebook-section">
 							<div className="fw-bold mb-2">📱 Свали безплатно:</div>
 							<div className="d-flex gap-2">
-								<a href="ebooks/Горски-приключения.pdf" className="btn-download btn-pdf" download>PDF версия</a>
-								<a href="ebooks/Горски-приключения.epub" className="btn-download btn-epub" download>EPUB версия</a>
-								<a href="ebooks/Горски-приключения.mobi" className="btn-download btn-mobi" download>MOBI версия</a>
-								
+								<a href="https://metometo.github.io/mdimitrov/public/ebooks/Горски-приключения.pdf" className="btn-download btn-pdf" download>PDF версия</a>
+								<a href="https://metometo.github.io/mdimitrov/public/ebooks/Горски-приключения.epub" className="btn-download btn-epub" download>EPUB версия</a>
+								<a href="https://metometo.github.io/mdimitrov/public/ebooks/Горски-приключения.mobi" className="btn-download btn-mobi" download>MOBI версия</a>								
 							</div>
 						</div>
 					</div>
