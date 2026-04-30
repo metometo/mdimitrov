@@ -1,6 +1,6 @@
  body {
             font-family: "Verdana";
-            background-color: #fdfbfb;f5f8ef;
+            background-color: #fdfbfb;/*f5f8ef;*/
             color: #5d4037;
             font-size: 14px;
             scroll-behavior: smooth;
@@ -9,7 +9,7 @@
         /* Навигация */
 		
         .navbar {
-            background: #067e9d;linear-gradient(90deg, #067e9d, #bae2ff);
+            background: #067e9d;/*linear-gradient(90deg, #067e9d, #bae2ff);*/
             border-bottom: 1px solid #eee;
             padding: 15px 0;
             position: sticky;
@@ -26,7 +26,7 @@
 
         .nav-link {
             font-weight: 900;
-            color: white;#5d4037 !important;
+            color: white;/*#5d4037 !important;*/
             margin: 0 15px;
             transition: 0.3s;
         }
@@ -65,7 +65,7 @@
         }
 
         .btn-pastel {
-            background-color: #ff8a80; #5aa9aa;
+            background-color: #ff8a80; /*#5aa9aa;*/
             color: white;
             border-radius: 30px;
             padding: 12px 35px;
