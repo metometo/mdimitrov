@@ -6,6 +6,7 @@ import { app, auth, db } from "./Firestore";
 import { getAuth, signInAnonymously } from "firebase/auth/cordova";
 import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore/lite";
+import { SendEmail } from "./SendMail";
 
 export function Book1()
 {
@@ -136,28 +137,32 @@ export function Book1()
                 timeStamp: serverTimestamp() // Добавя сървърно време на поръчката
         };
 
+		// reset form
+		document.getElementById('name').value = "";
+		document.getElementById('phone').value = "";
+		document.getElementById('address').value = "";
+		setOrderNumber(1);      
+
 		document.getElementById('orderFormSection').style.display = 'none';
 		document.getElementById('orderFormSectionMessage').style.display = 'block';
 
             try {
                 const docRef = await addDoc(collection(db, "orders"), orderData);
-               // alert("Поръчката е изпратена успешно! Номер: " + docRef.id);
-               // form.reset();
+
+				// send notification email
+				let emailStaatus = SendEmail();
+
+				if(emailStaatus==false)
+				{
+					document.getElementById('orderFormSectionMessage').innerHTML = "<div className='text-center py-5'><h2 className='text-error'>❌ Възникна грешка.</p></div>";
+					return;
+				}
+
 				document.getElementById('orderFormSectionMessage').innerHTML = "<div className='text-center py-5'><h2 className='text-success'>✅ Поръчка е приета!</h2><p>Ще се свържем с Вас за потвърждение.</p></div>";
-
-				// reset form
-				document.getElementById('name').value = "";
-                document.getElementById('phone').value = "";
-                document.getElementById('address').value = "";
-				setOrderNumber(1);
-                
-
-            } catch (error) {
-                console.error("Грешка при запис:", error);
-                
-				document.getElementById('orderFormSectionMessage').innerHTML = "<div className='text-center py-5'><h2 className='text-error'>❌ Възникна грешка.</p></div>";
-
             }
+			catch (error) {
+                document.getElementById('orderFormSectionMessage').innerHTML = "<div className='text-center py-5'><h2 className='text-error'>❌ Възникна грешка.</p></div>";
+			}
 	}
 
 	const images = ["1.png", "2.png", "3.png", "4.png"];
