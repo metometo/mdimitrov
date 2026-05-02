@@ -14,7 +14,7 @@ export function Header()
 					<div className="collapse navbar-collapse" id="navbarNav">
 						<ul className="navbar-nav ms-auto">
 							<li className="nav-item"><Link to="/" className="nav-link">Начало</Link></li>
-							<li className="nav-item"><Link to="/book" className="nav-link">Книги</Link></li>
+							<li className="nav-item"><Link to="/books/ForestAdventures" className="nav-link">Книги</Link></li>
 							<li className="nav-item"><Link to="/contacts" className="nav-link">Контакти</Link></li>
 						</ul>
 					</div>

@@ -18,10 +18,10 @@ function App() {
 				<Header/>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/book" element={<Book1 />} />
+					<Route path="/books/ForestAdventures" element={<Book1 />} />
 					<Route path="/contacts" element={<Contacts />} />
 					
-					</Routes>
+				</Routes>
 				<Footer/>
 			</BrowserRouter>
    
