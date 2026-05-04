@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import { app, auth, db } from "./Firestore";
+import { app, db } from "./Firestore";
 import { getAuth, signInAnonymously } from "firebase/auth/cordova";
 import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore/lite";
 import { SendEmail } from "./SendMail";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 export function Book1()
