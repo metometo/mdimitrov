@@ -6,24 +6,22 @@ export function Home()
 {
 	
 	return <>
-			<HelmetProvider>
-				<div>
-					<Helmet>				
-						<title>mdimitrov.com - Официална страница на Методи Димитров</title>
-						<meta name="description" content="Официална страница на Методи Димитров." />
-						<meta name="keywords" content="Методи Димитров, официална, страница" />
-						<meta name="author" content="Методи Димитров" />
-						<meta name="robots" content="index, follow" />
+				{/* Head meta data */}
+				<>		
+					<title>mdimitrov.com - Официална страница на Методи Димитров</title>
+					<meta name="description" content="Официална страница на Методи Димитров." />
+					<meta name="keywords" content="Методи Димитров, официална, страница" />
+					<meta name="author" content="Методи Димитров" />
+					<meta name="robots" content="index, follow" />
 
-						<meta property="og:type" content="website"/ >
-						<meta property="og:url" content="https://mdimitrov.com/" />
-						<meta property="og:title" content="mdimitrov.com - Официална страница на Методи Димитров" />
-						<meta property="og:description" content="Официална страница на Методи Димитров." />
-						
-						<link rel="canonical" href="https://www.mdimitrov.com/" />
-					</Helmet>
-				</div>
-			</HelmetProvider>
+					<meta property="og:type" content="website"/ >
+					<meta property="og:url" content="https://mdimitrov.com/" />
+					<meta property="og:title" content="mdimitrov.com - Официална страница на Методи Димитров" />
+					<meta property="og:description" content="Официална страница на Методи Димитров." />
+					
+					<link rel="canonical" href="https://www.mdimitrov.com/" />					
+				</>
+			
 
 			{/* Секция Начало */}
 			<section id="home" className="hero-intro">

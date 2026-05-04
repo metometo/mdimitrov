@@ -35,7 +35,8 @@ export function Book1()
 							const auth2 = getAuth(app);
 							// 3. Активиране на App Check (защита от ботове)
 							// Замени 'YOUR_RECAPTCHA_SITE_KEY' с ключа от Google reCAPTCHA
-							self.FIREBASE_APPCHECK_DEBUG_TOKEN = true; // Използвай това само по време на разработка
+							//self.FIREBASE_APPCHECK_DEBUG_TOKEN = true; // Използвай това само по време на разработка
+							
 							initializeAppCheck(app, {
 								provider: new ReCaptchaV3Provider('6Ld0D9AsAAAAAKWgrLeKry6rFUYjkQaO7rjkS14h'),
 								isTokenAutoRefreshEnabled: true
@@ -181,26 +182,22 @@ export function Book1()
 	}
 
 	return <>
-			<HelmetProvider>
-				<div>
-					<Helmet>				
-					<title>Горски приключения - Детска книжка от Методи Димитров</title>
-					<meta name="description" content="Открийте магията на 'Горски приключения' от Методи Димитров. Вълшебни истории за деца, които учат на доброта, приятелство и ценности. Поръчайте онлайн!" />
-					<meta name="keywords" content="Горски приключения, Методи Димитров, детска книжка, детски приказки, приказки за лека нощ, поръчка на книга" />
-					<meta name="author" content="Методи Димитров" />
-					<meta name="robots" content="index, follow" />
+			{/* Head meta data */}
+			<>			
+				<title>Горски приключения - Детска книжка от Методи Димитров</title>
+				<meta name="description" content="Открийте магията на 'Горски приключения' от Методи Димитров. Вълшебни истории за деца, които учат на доброта, приятелство и ценности. Поръчайте онлайн!" />
+				<meta name="keywords" content="Горски приключения, Методи Димитров, детска книжка, детски приказки, приказки за лека нощ, поръчка на книга" />
+				<meta name="author" content="Методи Димитров" />
+				<meta name="robots" content="index, follow" />
 
-					<meta property="og:type" content="book"/ >
-					<meta property="og:url" content="https://www.mdimitrov.com/books/ForestAdventures" />
-					<meta property="og:title" content="Горски приключения" />
-					<meta property="og:description" content="Вълшебни и поучителни приказки за деца от Методи Димитров. Разгледайте книгата онлайн!" />
-					<meta property="og:image" content="https://www.mdimitrov.com/cover.png" />
-					
-					<link rel="canonical" href="https://www.mdimitrov.com/books/ForestAdventures" />
-
-				</Helmet>
-			</div>
-			</HelmetProvider>
+				<meta property="og:type" content="book"/ >
+				<meta property="og:url" content="https://www.mdimitrov.com/books/ForestAdventures" />
+				<meta property="og:title" content="Горски приключения" />
+				<meta property="og:description" content="Вълшебни и поучителни приказки за деца от Методи Димитров. Разгледайте книгата онлайн!" />
+				<meta property="og:image" content="https://www.mdimitrov.com/cover.png" />
+				
+				<link rel="canonical" href="https://www.mdimitrov.com/books/ForestAdventures" />
+			</>
 
 			{/* Секция Книги (Твоят дизайн за книгата) */}
 			<section id="books" className="py-5">
